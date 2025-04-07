@@ -1,4 +1,4 @@
-#Importando bibliotecas para que seja verificar se o arquivo existe e consequentemente para manipular arquivos e diretórios
+#Importando bibliotecas para que seja possível verificar se o arquivo existe e consequentemente para manipular arquivos e diretórios
 from pathlib import Path
 import statistics
 
@@ -16,7 +16,7 @@ import PyPDF2 # type: ignore
 folder_docx = Path("D:/Users/ALLAN/documents/arquivo.docx") #Caminho do arquivo .docx
 folder_pdf = Path("D:/Users/ALLAN/documents/arquivo.pdf") #Caminho do arquivo .pdf
 
-#Função para extrair texte de arquivos .docx
+#Função para extrair texto de arquivos .docx
 def extract_text_from_docx(folder_docx):
     doc = Document(folder_docx) #Lendo o arquivo .docx
     return "\n".join([par.text for par in doc.paragraphs]) #Retorna o texto do arquivo .docx
@@ -41,7 +41,7 @@ else:
     print("Nenhum dos arquivos existe") #Retorno sobre a inexistência dos arquivos
     exit()
     
-#Extraindo todods os números do texto
+#Extraindo todos os números do texto
 finded_numbers = re.findall(r'\b\d+\b', texto)
 numbers = [int(n) for n in finded_numbers] #Lista para armazenar os números
     
