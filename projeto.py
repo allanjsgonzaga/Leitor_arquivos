@@ -18,14 +18,14 @@ folder_docx = Path("D:/Users/ALLAN/documents/arquivo.docx") #Caminho do arquivo 
 folder_pdf = Path("D:/Users/ALLAN/documents/arquivo.pdf") #Caminho do arquivo .pdf
 
 #Função para extrair texte de arquivos .docx
-def extract_text_from_docx(folder):
-    doc = Document(folder) #Lendo o arquivo .docx
+def extract_text_from_docx(folder_docx):
+    doc = Document(folder_docx) #Lendo o arquivo .docx
     return "\n".join([par.text for par in doc.paragraphs]) #Retorna o texto do arquivo .docx
 
 #Função para extrair texto de arquivos .pdf
-def extract_text_from_pdf(folder2):
+def extract_text_from_pdf(folder_pdf):
     text = ""
-    with open(folder2, "rb") as file: #Abrindo o arquivo .pdf
+    with open(folder_pdf, "rb") as file: #Abrindo o arquivo .pdf
         reader = PyPDF2.PdfReader(file) #Lendo o arquivo .pdf
         for page in reader.pages: #Iterando sobre as páginas do arquivo .pdf
             text += page.extract_text() + "\n"
