@@ -1,6 +1,5 @@
 #Importando bibliotecas para que seja verificar se o arquivo existe e consequentemente para manipular arquivos e diretórios
 from pathlib import Path
-from pydoc import doc
 import statistics
 
 #Importando biblioteca para expressões regulares(Para que os numeros sejam extraídos do texto)
