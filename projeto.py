@@ -1,3 +1,7 @@
+#Allan Jefferson Silva Gonzaga  
+#Matrícula: 2023012277
+
+
 #Importando bibliotecas para que seja possível verificar se o arquivo existe e consequentemente para manipular arquivos e diretórios
 from pathlib import Path
 import statistics
